@@ -1,3 +1,25 @@
+# Rick & Morty Explorer (GetX + Hive)
+
+Simple Flutter app demonstrating:
+- Paginated list from the Rick & Morty API
+- Detail view
+- Favorites persisted locally with Hive
+- Local editable overrides that persist
+- Offline-friendly page caching
+
+Setup
+1. Ensure Flutter stable SDK installed.
+2. From project root run:
+
+```bash
+flutter pub get
+flutter run
+```
+
+Notes
+- State management: GetX (simple reactive controller).
+- Storage: Hive boxes (`cache`, `edits`, `favorites`). No codegen required.
+- If you want type adapters, add `hive_generator` + `build_runner` and generate adapters; not required here.
 # rick_mortyflutter_app
 
 A new Flutter project.
