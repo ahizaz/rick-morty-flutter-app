@@ -14,6 +14,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   late final CharacterController ctrl;
   late final ScrollController scroll;
+  final TextEditingController searchController = TextEditingController();
   int _selectedIndex = 0;
 
   @override
@@ -35,6 +36,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void dispose() {
     scroll.dispose();
+    searchController.dispose();
     super.dispose();
   }
 
@@ -57,8 +59,14 @@ class _HomePageState extends State<HomePage> {
                   child: SizedBox(
                     height: double.infinity,
                     child: TextField(
+                      controller: searchController,
                       decoration: const InputDecoration(hintText: 'Search by name', border: OutlineInputBorder()),
-                      onSubmitted: (v) => ctrl.setQuery(v),
+                      onChanged: (v) {
+                        ctrl.setQuery(v);
+                      },
+                      onSubmitted: (v) {
+                        FocusScope.of(context).unfocus();
+                      },
                     ),
                   ),
                 ),

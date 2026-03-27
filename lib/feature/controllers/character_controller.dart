@@ -37,7 +37,7 @@ class CharacterController extends GetxController {
         final results = data['results'] as List<dynamic>;
         await HiveService.cachePage(p, results);
         for (var r in results) {
-          await HiveService.cacheCharacter((r as Map)['id'] as int, (r as Map).cast<String, dynamic>());
+          await HiveService.cacheCharacter((r as Map)['id'] as int, (r).cast<String, dynamic>());
         }
       } catch (_) {
         final cached = HiveService.getCachedPage(p);

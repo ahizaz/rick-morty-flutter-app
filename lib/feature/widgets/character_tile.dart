@@ -12,7 +12,7 @@ class CharacterTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ctrl = Get.find<CharacterController>();
+    Get.find<CharacterController>();
     return InkWell(
       onTap: () => Get.to(() => DetailPage(id: character.id)),
       child: Container(

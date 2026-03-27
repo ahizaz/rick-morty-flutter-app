@@ -11,7 +11,7 @@ class HiveService {
     favoritesBox = await Hive.openBox('favorites');
   }
 
-  // Cache helpers
+  
   static Future<void> cachePage(int page, List<dynamic> charactersJson) async {
     await cacheBox.put('page_$page', charactersJson);
   }
@@ -24,7 +24,7 @@ class HiveService {
 
   static Map<String, dynamic>? getCachedCharacter(int id) => (cacheBox.get('char_$id') as Map?)?.cast<String, dynamic>();
 
-  // Edits
+  // Edits here
   static Future<void> saveEdits(int id, Map<String, dynamic> edits) async {
     await editsBox.put(id.toString(), edits);
   }
