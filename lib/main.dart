@@ -10,7 +10,7 @@ void main()async {
 
   
   WidgetsFlutterBinding.ensureInitialized();
-  await Hive.initFlutter();
+  await Hive.initFlutter();//initialize the hive
   await HiveService.initBoxes();
 
   Get.put(CharacterController());

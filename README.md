@@ -2,7 +2,7 @@
 
 An offline-friendly Flutter app to browse, search, and favorite Rick & Morty characters. Built with GetX for state management and Hive for local storage.
 
-## Features
+ Features
 
 - **Paginated character list** from the [Rick & Morty API](https://rickandmortyapi.com/)
 - **Detail view** for each character (with editable fields)
@@ -13,7 +13,7 @@ An offline-friendly Flutter app to browse, search, and favorite Rick & Morty cha
 
 ---
 
-## Setup Instructions
+Setup Instructions
 
 1. **Install Flutter** (stable channel): [Flutter Install Guide](https://docs.flutter.dev/get-started/install)
 2. **Clone this repo** and open the project root
@@ -28,7 +28,7 @@ An offline-friendly Flutter app to browse, search, and favorite Rick & Morty cha
 
 ---
 
-## State Management Choice
+ State Management Choice
 
 **GetX** is used for state management. GetX provides a simple, reactive, and lightweight approach to managing state, navigation, and dependency injection. It enables:
 - Reactive UI updates with minimal boilerplate
@@ -42,21 +42,21 @@ An offline-friendly Flutter app to browse, search, and favorite Rick & Morty cha
 
 ---
 
-## Storage Approach
+Storage Approach
 
-**Hive** is used for local storage. Three boxes are used:
+Hive* is used for local storage. Three boxes are used:
 - `cache`: Stores paginated API responses and character data for offline access
 - `edits`: Stores local edits to character fields (overrides API data)
 - `favorites`: Stores a list of favorite character IDs
 
-**Why Hive?**
+Why Hive?
 - Fast, lightweight, and easy to use
 - No code generation required for simple dynamic storage
 - Works well for key-value and list storage patterns
 
 ---
 
-## App Review
+App Review
 
 This app demonstrates a robust Flutter architecture for consuming a REST API with offline support and local data overrides. Key highlights:
 
